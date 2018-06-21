@@ -23,14 +23,17 @@ def main():
     args = create_parser()
     string = args.string
 
-    if args.upper:
-        print(string.upper())
+    try: 
+        if args.upper:
+            print(string.upper())
 
-    if args.lower:
-        print(string.lower())
+        if args.lower:
+            print(string.lower())
 
-    if args.proper:
-        print(str(string).capitalize())
+        if args.proper:
+            print(string.capitalize())
+    except (BrokenPipeError, IOError):
+        print ('BrokenPipeError caught', file = sys.stderr)
 
 
 main()
