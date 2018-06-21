@@ -1,3 +1,3 @@
 #!/bin/sh
-cm case.py /usr/local/bin/case
-chmod +x /usr/local/bin/case
+cp scase.py /usr/local/bin/scase
+chmod +x /usr/local/bin/scase
